@@ -5,15 +5,18 @@ import {Router} from 'react-router-dom'
 import history from './history'
 import store from './store'
 import App from './app'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles/'
 
-// establishes socket connection
 import './socket'
 
+const theme = createMuiTheme({palette: {type: 'dark'}})
 ReactDOM.render(
-  <Provider store={store}>
+  <MuiThemeProvider theme={theme}>
+    <CssBaseline />
     <Router history={history}>
       <App />
     </Router>
-  </Provider>,
-  document.getElementById('app')
+  </MuiThemeProvider>,
+  document.getElementById('root')
 )

@@ -11,9 +11,9 @@ export default class Routes extends Component {
     return (
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/Def" component={ClauseDefinition} />
+        {/* <Route exact path="/Def" component={ClauseDefinition} />
         <Route exact path="/Claws" component={Claws} />
-        <Route exact path="/Translation" component={Translation} />
+        <Route exact path="/Translation" component={Translation} /> */}
       </Switch>
     )
   }

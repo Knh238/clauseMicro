@@ -59,8 +59,12 @@ router.get('/:hashed', async (req, res, next) => {
     const originalReq = await HashedMessages.findOne({
       where: {hashedValue: req.params.hashed}
     })
-    console.log('message is in here', originalReq)
-    res.json({message: originalReq.message})
+
+    if (originalReq) {
+      return res.json({message: originalReq.message})
+    } else {
+      return res.json('value not previous hashed')
+    }
   } catch (err) {
     next(err)
   }
