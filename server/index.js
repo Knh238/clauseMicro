@@ -2,9 +2,7 @@ const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
 const compression = require('compression')
-
 const db = require('./db')
-
 const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
@@ -43,6 +41,9 @@ const createApp = () => {
   })
 }
 
+// const syncDb = () => {
+//   db.sync()
+// }
 const startListening = () => {
   const server = app.listen(PORT, () =>
     console.log(`Mixing it up on port ${PORT}`)
@@ -53,6 +54,7 @@ const startListening = () => {
 }
 
 async function bootApp() {
+  // await syncDb()
   await createApp()
   await startListening()
 }

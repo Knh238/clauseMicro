@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
-const db = require('./database')
+const db = require('./db')
 
-const HashedMessages = db.define('hashedMessages ', {
+const HashedMessages = db.define('hashedMessages s', {
   message: {
     type: Sequelize.STRING,
     allowNull: false

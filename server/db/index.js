@@ -1,6 +1,6 @@
-const db = require('./database')
-const Sequelize = require('sequelize')
-const HashedMessages = require('./HashedMessages.model')
+const db = require('./db')
+// const Sequelize = require('sequelize')
+const HashedMessages = require('./HashedMessage.model.js')
 
 module.exports = {
   db,

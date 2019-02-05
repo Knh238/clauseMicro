@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const {HashedMessages} = require('../db')
+
 router.use('/', require('./messages'))
 
 router.use((req, res, next) => {
