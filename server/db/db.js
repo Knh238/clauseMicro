@@ -1,17 +1,8 @@
-// const Sequelize = require('sequelize')
-// const pkg = require('../../package.json')
-
-// const db = new Sequelize(`postgres://localhost:5432/clauseMicroservice`, {
-//   logging: false
-// })
-
-// module.exports = db
-
 const Sequelize = require('sequelize')
 const pkg = require('../../package.json')
 
 const db = new Sequelize(
-  process.env.DATABASE_URL || `postgres://localhost:5432/clauseMicroservice`,
+  process.env.DATABASE_URL || `postgres://localhost:5432/clauseApp`,
   {
     logging: false
   }

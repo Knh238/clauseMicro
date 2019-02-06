@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {HashedMessages} = require('../db')
+const {HashedMessages} = require('../db/models')
 const crypto = require('crypto')
 module.exports = router
 

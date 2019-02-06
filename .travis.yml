@@ -14,4 +14,4 @@ notifications:
 install:
   - npm ci
 before_script:
-  - psql -c 'create database "clauseMicroservice";' -U postgres
+  - psql -c 'create database "clauseApp";' -U postgres
