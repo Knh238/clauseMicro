@@ -7,12 +7,14 @@ import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
+import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
-import Paper from '@material-ui/core/Paper'
 import ClauseDefinition from './ClauseDefinition'
+import Translation from './Translation'
 import Claws from './Claws'
+import {CardHeader} from '@material-ui/core'
 const crypto = require('crypto')
 const hash = crypto.createHash('sha256')
 
@@ -43,18 +45,6 @@ function checkCatTerms(term) {
   }
 }
 
-// async function postText(inputText) {
-//   try {
-//     const { data } = await axios.post(`/messages/`, inputText);
-//     // hashFunc(inputText);
-//     return data;
-//     // ownProps.history.push(`/messages`);
-//   } catch (err) {
-//     console.error(err);
-//     // ownProps.history.push(`/oops`);
-//   }
-// }
-
 export default class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -70,7 +60,6 @@ export default class Home extends React.Component {
     } else if (catTerm) {
       this.setState({textToTranslate: '', translation: 'CLAWS!'})
     } else {
-      // const data = await postText(input);
       const result = crypto
         .createHash('sha256')
         .update(input, 'binary')
@@ -81,17 +70,15 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Paper style={{height: '55%'}}>
         <div>
           <Card
             style={{
-              float: 'none',
-              width: '55%',
               marginLeft: 'auto',
-              marginRight: 'auto'
+              marginRight: 'auto',
+              height: '25%'
             }}
           >
-            {' '}
             <Typography
               variant="h3"
               style={{fontFamily: 'Signika'}}
@@ -99,18 +86,21 @@ export default class Home extends React.Component {
             >
               Let's Hash it out!
             </Typography>
-            <CardMedia
-              component="img"
-              image="https://cdn101.picsart.com/207085903000201.jpg?r1024x1024"
-              title="home"
-            />
+            <CardContent align="center">
+              <CardMedia
+                align="center"
+                style={{height: '40%', width: '40%'}}
+                component="img"
+                image="https://cdn101.picsart.com/207085903000201.jpg"
+                title="home"
+              />
+            </CardContent>
           </Card>
         </div>
         <div>
           <Card
             style={{
               float: 'none',
-              width: '55%',
               marginLeft: 'auto',
               marginRight: 'auto'
             }}
@@ -158,27 +148,27 @@ export default class Home extends React.Component {
           <Card
             style={{
               float: 'none',
-              width: '55%',
+              height: '30%',
               marginLeft: 'auto',
               marginRight: 'auto',
               backgroundColor: '#009688'
             }}
           >
-            <CardContent>
+            <CardContent align="center">
               <Typography
                 paragraph
                 gutterBottom
+                variant="h3"
                 style={{
-                  fontFamily: 'Major Mono Display'
+                  fontFamily: 'Signika'
                 }}
               >
                 {this.state.translation}
               </Typography>
             </CardContent>
           </Card>
-          )}
         </div>
-      </div>
+      </Paper>
     )
   }
 }

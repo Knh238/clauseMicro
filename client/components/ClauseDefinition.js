@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import {withStyles} from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
@@ -28,7 +27,6 @@ export default class ClauseDefinition extends React.Component {
       <Card
         style={{
           float: 'none',
-          width: '55%',
           marginLeft: 'auto',
           marginRight: 'auto'
         }}
@@ -37,15 +35,17 @@ export default class ClauseDefinition extends React.Component {
         <Typography variant="h3" style={{fontFamily: 'Signika'}} align="center">
           Translation:
         </Typography>
-        <CardMedia
-          component="img"
-          height="50%"
-          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKhXkxjGCzShJzXhMGDCwKCv4BNJKzACb0bI9uWsOhECoWHeK"
-          title="logo"
-          fullwidth="true"
-        />
-        <CardContent>
-          <Typography variant="h1" style={{fontFamily: 'Signika'}}>
+        <CardContent align="center">
+          <CardMedia
+            component="img"
+            style={{height: '25%', width: '25%'}}
+            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKhXkxjGCzShJzXhMGDCwKCv4BNJKzACb0bI9uWsOhECoWHeK"
+            title="logo"
+            fullwidth="true"
+          />
+        </CardContent>
+        <CardContent align="center">
+          <Typography variant="h2" style={{fontFamily: 'Signika'}}>
             Clause
           </Typography>
         </CardContent>

@@ -13,9 +13,9 @@ class App extends React.Component {
         style={{
           position: 'absolute',
           left: '10%',
-          width: '90%',
+          width: '80%',
           top: '5%',
-          height: '95%',
+          height: '25%',
           padding: 10
         }}
       >
