@@ -38,10 +38,9 @@ export default class ClauseDefinition extends React.Component {
         <CardContent align="center">
           <CardMedia
             component="img"
-            style={{height: '25%', width: '25%'}}
+            style={{height: '15%', width: '15%'}}
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKhXkxjGCzShJzXhMGDCwKCv4BNJKzACb0bI9uWsOhECoWHeK"
             title="logo"
-            fullwidth="true"
           />
         </CardContent>
         <CardContent align="center">

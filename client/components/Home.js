@@ -25,7 +25,9 @@ function checkKeyTerms(word) {
     'smartclause',
     'smartcontracts',
     'contracts',
-    'contract'
+    'contract',
+    'opensource',
+    'legal'
   ]
   if (clauseArr.indexOf(word) !== -1) {
     console.log('hey it has a match')
@@ -37,7 +39,16 @@ function checkKeyTerms(word) {
 
 function checkCatTerms(term) {
   term = term.toLowerCase()
-  const catTerms = ['meow', 'kitty', 'cat', 'furball', 'kitten', 'paws', 'purr']
+  const catTerms = [
+    'meow',
+    'kitty',
+    'cat',
+    'furball',
+    'kitten',
+    'paws',
+    'purr',
+    'cute'
+  ]
   if (catTerms.indexOf(term) !== -1) {
     return true
   } else {
@@ -70,7 +81,7 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <Paper style={{height: '55%'}}>
+      <Paper style={{height: 500}}>
         <div>
           <Card
             style={{
@@ -89,7 +100,7 @@ export default class Home extends React.Component {
             <CardContent align="center">
               <CardMedia
                 align="center"
-                style={{height: '40%', width: '40%'}}
+                style={{height: '30%', width: '30%'}}
                 component="img"
                 image="https://cdn101.picsart.com/207085903000201.jpg"
                 title="home"
@@ -107,7 +118,7 @@ export default class Home extends React.Component {
           >
             <CardContent>
               <Typography
-                variant="h3"
+                variant="h4"
                 style={{fontFamily: 'Signika'}}
                 align="center"
               >
@@ -117,7 +128,6 @@ export default class Home extends React.Component {
             <CardContent align="center">
               <TextField
                 id="outlined-multiline-flexible"
-                rowsMax="4"
                 classes={{
                   root: styles.inputRoot,
                   input: styles.inputInput
@@ -158,7 +168,7 @@ export default class Home extends React.Component {
               <Typography
                 paragraph
                 gutterBottom
-                variant="h3"
+                variant="h5"
                 style={{
                   fontFamily: 'Signika'
                 }}

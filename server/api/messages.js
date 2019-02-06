@@ -5,7 +5,14 @@ module.exports = router
 
 const checkKeyTerms = term => {
   term = term.toLowerCase()
-  const clauseTerms = ['clause', 'smartclause', 'smartcontracts', 'contracts']
+  const clauseTerms = [
+    'clause',
+    'smartclause',
+    'smartcontracts',
+    'contracts',
+    'opensource',
+    'legal'
+  ]
   if (clauseTerms.indexOf(term) > 0) {
     return 'CLAUSE'
   } else {
@@ -14,7 +21,16 @@ const checkKeyTerms = term => {
 }
 const checkCatTerms = term => {
   term = term.toLowerCase()
-  const catTerms = ['meow', 'kitty', 'cat', 'furball', 'kitten', 'paws', 'purr']
+  const catTerms = [
+    'meow',
+    'kitty',
+    'cat',
+    'furball',
+    'kitten',
+    'paws',
+    'purr',
+    'cute'
+  ]
   if (catTerms.indexOf(term) > 0) {
     return 'CLAWS'
   } else {
